@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/first_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/first_name"
+                android:textSize="18sp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@color/gray"
+                android:ems="7"
+                android:nextFocusDown="@id/last_name"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textColorHint="#616161"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp">
+
+            <TextView
+                android:id="@+id/last_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/last_name"
+                android:textSize="18sp"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@color/gray"
+                android:ems="15"
+                android:hint="@string/last_name"
+                android:nextFocusDown="@id/birthday"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textColorHint="#616161"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/female" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/birthday_label"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/birthday"
+            android:textSize="18sp"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/birthday"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="@color/gray"
+                android:ems="7"
+                android:hint="@string/birthday"
+                android:inputType="date"
+                android:minHeight="60dp"
+                android:padding="5dp"
+                android:textColorHint="#616161"
+                tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/select"
+                android:layout_width="91dp"
+                android:layout_height="55dp"
+                android:layout_gravity="end"
+                android:text="@string/select" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@color/gray"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/address"
+            android:inputType="textMultiLine"
+            android:minHeight="90dp"
+            android:padding="5dp"
+            android:textColorHint="#616161"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@color/gray"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textColorHint="#616161"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Terms_of_Use"
+        tools:ignore="VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
